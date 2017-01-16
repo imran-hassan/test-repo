@@ -43,8 +43,6 @@ Details in section 4.1 below.
 
 There were no changes made in logs, UVEs or alarms.
 
-
-
 #4. Implementation
 ##4.1  Work items
 
@@ -58,35 +56,16 @@ These steps are to be followed to make changes in contrail GUI to reflect the im
 
 + Declare bgp_origin as optional field in file **webroot/common/api/jsonDiff.helper.js** in optFields.
 
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_a.png "Img 1")
-
 + Declare bgp_origin format in **webroot/config/services/bgpasaservice/ui/js/bgpAsAServiceFormatter.js**, which is called by frontend to show appropriate bgp origin value.
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_b.png "Img 2")
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_c.png "Img 3")
 
 + In ContrailConfigModel, add bgp_origin in defaultConfig which is present in this file: **webroot/config/services/bgpasaservice/ui/js/models/bgpAsAServiceModel.js**.
 
 String value from front end is converted into integer value to be sent to the backend. 
 Then the value received at frontend is validated that whether it is 0, 1, 2 or 3.
 
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_e.png "Img 5")
-
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_f.png "Img 6")
-
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_g.png "Img 7")
-
 + To add a new field on the GUI, the structure of a drop down menu is defined in **webroot/config/services/bgpasaservice/ui/js/views/bgpAsAServiceEditView.js**. This enables different options i.e. IGP, BGP, ICOMPLETE and NONE to be visible in the drop down menu at Edit View on GUI.
 
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_h.png "Img 8")
-
 + To make the BGP origin value visible in the Grid View, changes are made in **webroot/config/services/bgpasaservice/ui/js/views/bgpAsAServiceGridView.js**.
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_i.png "Img 9")
 
 + The value of BGP origin is bonded with BGP origin formatter by making changes in “this.bgpOrigunViewFormattter” function.	
 
