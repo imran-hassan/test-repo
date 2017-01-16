@@ -78,10 +78,6 @@ On Front End, we get field of **BGP origin** in the tabs **Create**, **Edit** an
 
 ![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_l.png "Img 12")
 
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_m.png "Img 13")
-
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_n.png "Img 14")
-
 An object is passed from front end to API Server when we create BGP as a service.
 
 Details in contrail-controller repo README.md
