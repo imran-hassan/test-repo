@@ -12,12 +12,11 @@ BGP can be divided in the following components:
 
 This blueprint provides a detailed description on defining a new origin field by:
 
-1. Making changes in Contrail configuration files. 
+1. Making changes in Contrail configuration files.
 2. Making changes in Contrail GUI.
 3. Making changes in controller.
 
 All of these steps are to be performed for the new functionality to work successfully.
-
 
 #2. Problem statement
 ###Normalize route origin when learning routes from a VM/VNF.
@@ -60,14 +59,14 @@ These steps are to be followed to make changes in contrail GUI to reflect the im
 
 + In ContrailConfigModel, add bgp_origin in defaultConfig which is present in this file: **webroot/config/services/bgpasaservice/ui/js/models/bgpAsAServiceModel.js**.
 
-String value from frontend is converted into integer value to be sent to the backend. 
+String value from frontend is converted into integer value to be sent to the backend.
 Then the value received at frontend is validated that whether it is 0, 1, 2 or 3.
 
 + To add a new field on the GUI, the structure of a drop down menu is defined in **webroot/config/services/bgpasaservice/ui/js/views/bgpAsAServiceEditView.js**. This enables different options i.e. IGP, BGP, ICOMPLETE and NONE to be visible in the drop down menu at Edit View on GUI.
 
 + To make the BGP origin value visible in the Grid View, changes are made in **webroot/config/services/bgpasaservice/ui/js/views/bgpAsAServiceGridView.js**.
 
-+ The value of BGP origin is bonded with BGP origin formatter by making changes in “this.bgpOrigunViewFormattter” function.	
++ The value of BGP origin is bonded with BGP origin formatter by making changes in “this.bgpOrigunViewFormattter” function.
 
 By making the above mentioned changes, the BGP Origin Field will become configurable in the UI.
 On frontend, we get field of **BGP origin** in the tabs **Create**, **Edit** and **Grid view**. BGP origin field is also visible in the tab “BGP as a service.”
@@ -105,7 +104,7 @@ GUI unit test: Check if values are visible on frontend and are passed to the bac
 
 ##9.2 Dev test
 
-Flow Test Steps: 
+Flow Test Steps:
 
 + Check if value of BGP origin is received from frontend.
 
