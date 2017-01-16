@@ -27,9 +27,6 @@ This feature request is related to BGP as a Service (i.e. the vRouter peering wi
 Contrail by default exposes certain configurable options to the admin in management console which are eventually used by underlying service when making certain decisions or creating packets. In order to make origin field configurable, following set of changes are needed:
 
 + Expose a configurable option (Origin) in BGPaaS admin UI
-+ Pass this value from UI to the configuration node and IF-MAP
-+ From configuration node pass it to controller where BGP (core) implementation can access it.
-+ If a user-specified value was provided, then use it otherwise follow existing logic
 
 ##3.1 Alternatives considered
 Describe pros and cons of alternatives considered.
