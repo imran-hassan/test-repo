@@ -49,7 +49,8 @@ There were no changes made in logs, UVEs or alarms.
 ##4.1  Work items
 
 It has 4 modules. The GUI changes are mentioned below.
-The rest are defined in contrail-controller repo README.md.
+
+The rest are defined in contrail-controller repo README.md
 
 ###4.1.1 UI changes
 
@@ -68,7 +69,8 @@ By making the above mentioned changes, the BGP Origin Field will become configur
 On Front End, we get field of **BGP origin** in the tabs **Create**, **Edit** and **Grid view**. BGP origin field is also visible in the tab “BGP as a service.”  
 
 An object is passed from front end to API Server when we create BGP as a service.
-Details in contrail-controller repo README.md.
+
+Details in contrail-controller repo README.md
 
 #5. Performance and scaling impact
 ##5.1 API and control plane
