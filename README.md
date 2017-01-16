@@ -60,7 +60,7 @@ These steps are to be followed to make changes in contrail GUI to reflect the im
 
 + In ContrailConfigModel, add bgp_origin in defaultConfig which is present in this file: **webroot/config/services/bgpasaservice/ui/js/models/bgpAsAServiceModel.js**.
 
-String value from front end is converted into integer value to be sent to the backend. 
+String value from frontend is converted into integer value to be sent to the backend. 
 Then the value received at frontend is validated that whether it is 0, 1, 2 or 3.
 
 + To add a new field on the GUI, the structure of a drop down menu is defined in **webroot/config/services/bgpasaservice/ui/js/views/bgpAsAServiceEditView.js**. This enables different options i.e. IGP, BGP, ICOMPLETE and NONE to be visible in the drop down menu at Edit View on GUI.
@@ -70,7 +70,7 @@ Then the value received at frontend is validated that whether it is 0, 1, 2 or 3
 + The value of BGP origin is bonded with BGP origin formatter by making changes in “this.bgpOrigunViewFormattter” function.	
 
 By making the above mentioned changes, the BGP Origin Field will become configurable in the UI.
-On Front End, we get field of **BGP origin** in the tabs **Create**, **Edit** and **Grid view**. BGP origin field is also visible in the tab “BGP as a service.”
+On frontend, we get field of **BGP origin** in the tabs **Create**, **Edit** and **Grid view**. BGP origin field is also visible in the tab “BGP as a service.”
 
 ![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_j.png "Img 10")
 
@@ -78,7 +78,7 @@ On Front End, we get field of **BGP origin** in the tabs **Create**, **Edit** an
 
 ![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_l.png "Img 12")
 
-An object is passed from front end to API Server when we create BGP as a service.
+An object is passed from frontend to API Server when we create BGP as a service.
 
 Details in contrail-controller repo README.md
 
