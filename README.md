@@ -71,7 +71,7 @@ Then the value received at frontend is validated that whether it is 0, 1, 2 or 3
 By making the above mentioned changes, the BGP Origin Field will become configurable in the UI.
 On frontend, we get field of **BGP origin** in the tabs **Create**, **Edit** and **Grid view**. BGP origin field is also visible in the tab “BGP as a service.”
 
-![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_j.png "Img 10")
+![alt text](images/sec_4.1.1_j.png "Img 10")
 
 ![alt text](https://github.com/saad-ngnware/test-repo/blob/master/images/sec_4.1.1_k.png "Img 11")
 
