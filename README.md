@@ -1,30 +1,26 @@
 
 #1. Introduction
 
-The contrail BGP implementation was designed from scratch to run on modern
-server environments. The main goals were to be able to take advantage of
-multicore CPUs, large (>4G) memory footprints and modern software development
-techniques.
+The contrail BGP implementation was designed from scratch to run on modern </br> server environments. The main goals were to be able to take advantage of </br> multicore CPUs, large (>4G) memory footprints and modern software development </br> techniques.
 
 BGP can be divided in the following components:
 
-1. **Input processing**: decoding and validating messages received from each
-peer.
-2. **Routing table operations**: modifying the routing table and determining the set of updates to generate.
-3. **Update encoding**: draining the update queue and encoding messages to a set of peers.
+1. **Input processing**: decoding and validating messages received from each </br> peer.
+2. **Routing table operations**: modifying the routing table and determining the </br> set of updates to generate.
+3. **Update encoding**: draining the update queue and encoding messages to a set </br> of peers.
 4. **Management operations**: configuration processing and diagnostics.
 
-This blueprint provides a detailed description on defining a new origin field by:
+This blueprint provides a detailed description on defining a new origin field </br> by:
 
 1. Making changes in Contrail configuration files.
 2. Making changes in Contrail GUI.
 3. Making changes in controller.
 
-All of these steps are to be performed for the new functionality to work successfully.
+All of these steps are to be performed for the new functionality to work </br> successfully.
 
 #2. Problem statement
 ###Normalize route origin when learning routes from a VM/VNF.
-This feature request is related to BGP as a Service (i.e. the vRouter peering with a VNF running in a VM). It concerns the route origin field in BGP. On PNF routers it is possible to override the route origin field of incoming routes that are learned from peers. This same capability is needed when Contrail learns routes from VNFs. In particular, this is related to the vLB VNF because VNF does NOT want route origin to be part of the tiebreaker protocol when choosing between routes. It is necessary to be able to set the route origin field of routes learned from vLB VNFs to a single value across entire network so that differences in route origin value between different vLB instances won't contribute to route selection.
+This feature request is related to BGP as a Service (i.e. the vRouter peering </br> with a VNF running in a VM). It concerns the route origin field in BGP. On PNF </br> routers it is possible to override the route origin field of incoming routes </br> that are learned from peers. This same capability is needed when Contrail learns </br> routes from VNFs. In particular, this is related to the vLB VNF because VNF does NOT want route origin to be part of the tiebreaker protocol when choosing between routes. It is necessary to be able to set the route origin field of routes learned from vLB VNFs to a single value across entire network so that differences in route origin value between different vLB instances won't contribute to route selection.
 
 #3. Proposed solution
 Contrail by default exposes certain configurable options to the admin in management console which are eventually used by underlying service when making certain decisions or creating packets. In order to make origin field configurable, following set of changes are needed:
