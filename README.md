@@ -1,11 +1,15 @@
 
 #1. Introduction
 
-The contrail BGP implementation was designed from scratch to run on modern server environments. The main goals were to be able to take advantage of multicore CPUs, large (>4G) memory footprints and modern software development techniques.
+The contrail BGP implementation was designed from scratch to run on modern
+server environments. The main goals were to be able to take advantage of
+multicore CPUs, large (>4G) memory footprints and modern software development
+techniques.
 
 BGP can be divided in the following components:
 
-1. **Input processing**: decoding and validating messages received from each peer.
+1. **Input processing**: decoding and validating messages received from each
+peer.
 2. **Routing table operations**: modifying the routing table and determining the set of updates to generate.
 3. **Update encoding**: draining the update queue and encoding messages to a set of peers.
 4. **Management operations**: configuration processing and diagnostics.
